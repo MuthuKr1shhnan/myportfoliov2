@@ -1,0 +1,372 @@
+@import "tailwindcss";
+
+html, body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: #111111;
+    font-family: 'Ubuntu', sans-serif;
+    overflow: hidden;
+  
+}  
+body.loading * {
+    pointer-events: none;
+    cursor: default;
+  }
+  body.loading .loader {
+    pointer-events: auto;
+  }
+.active {
+    color: #76ABAE;
+}
+
+.hoverText {
+    transition: 
+    0.2s font-weight,
+    0.2s color;
+}
+
+.hoverText:hover {
+    font-weight: 900;
+    color: #0000ff;
+}
+
+.hoverText:hover + .hoverText {
+    font-weight:500;
+    color:#3737ec;
+}
+
+.hoverText:hover + .hoverText+ .hoverText {
+    font-weight: 300;
+}
+
+.hoverText:has(+ .hoverText:hover) {
+    font-weight: 500;
+    color: #5555f0;
+}
+
+.hoverText:has(+ .hoverText + .hoverText:hover) {
+    font-weight: 300;
+}
+
+.disable-text {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none; 
+    -webkit-tap-highlight-color: transparent;
+}
+
+.embla {
+  overflow: hidden;
+}
+.embla__container {
+  display: flex;
+}
+.embla__slide {
+  flex: 0 0 100%;
+  min-width: 0;
+}
+.ubuntu-medium {
+    font-family: "Edu AU VIC WA NT Arrows", cursive;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+/* styles.css */
+
+.content {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    perspective: 1000px;
+}
+
+canvas#neuro {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    opacity: 0.95;
+    z-index: 0;
+}
+/* styles.css */
+
+
+
+.content {
+    position: absolute;
+    z-index: 1;
+}
+/* styles.css */
+
+
+
+
+
+
+
+.section > div {
+    font-size: 20vh;
+    color: #ff00ff; /* Vermelho */
+}
+
+canvas#neuro {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    opacity: .95;
+}
+
+
+
+
+
+
+
+/* .tech-box {
+  position: absolute;
+  top: -10px;
+  right: -2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  background-color: #0e0e0e;
+  width: 250px;
+  height: 50px;
+  border-bottom-left-radius: 20px;
+}
+
+.tech-box::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -30px;
+  width: 30px;
+  height: 24px;
+  background-color: transparent;
+  border-top-right-radius: 20px;
+  box-shadow: 8px -5px  #0e0e0e;
+}
+.tech-box::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: -30px;
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+  border-top-right-radius: 20px;
+  box-shadow: 8px -5px  #0e0e0e;
+}
+.link-box {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  background-color:  #0e0e0e;
+  width: 60px;
+  height: 60px;
+  border-top-left-radius: 50%;
+}
+
+.link-box::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: -40px;
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  border-bottom-right-radius: 20px;
+  box-shadow: 8px 5px  #0e0e0e;
+}
+
+.link-box::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: -30px;
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+  border-bottom-right-radius: 20px;
+  box-shadow: 8px 5px  #0e0e0e;
+}
+.project-box {
+  box-shadow: 0px 0px 0px rgba(148, 15, 242, 0.7);
+  transform: translateX(0) translateY(0);
+  transition: all 0.3s ease;
+}
+
+.project-box:hover .project-text-h1 {
+  color: #0000f5;
+  font-weight: 800;
+  filter: drop-shadow(0px 0px 5px rgba(148, 15, 242, 0.7));
+  transition: all 0.3s ease;
+}
+
+
+
+
+.clr{
+    color: white;
+    transform: rotate(-30deg);
+}
+.clr:hover{
+    transform: rotate(0deg);
+    transition: transform 0.3s ease;
+}
+.zoom:hover{
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out;
+} */
+
+.tech-box {
+  position: absolute;
+  top: -10px;
+  right: -2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  background-color: #0e0e0e;
+  width: 250px;
+  height: 50px;
+  border-bottom-left-radius: 20px;
+  z-index: 2;
+  will-change: transform;
+}
+
+.tech-box::before,
+.tech-box::after {
+  content: "";
+  position: absolute;
+  background-color: transparent;
+  box-shadow: 8px -5px #0e0e0e;
+  will-change: box-shadow;
+}
+
+.tech-box::before {
+  top: 0;
+  left: -30px;
+  width: 30px;
+  height: 24px;
+  border-top-right-radius: 20px;
+}
+
+.tech-box::after {
+  right: 0;
+  bottom: -30px;
+  width: 30px;
+  height: 30px;
+  border-top-right-radius: 20px;
+}
+
+.link-box {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0e0e0e;
+  width: 60px;
+  height: 60px;
+  border-top-left-radius: 50%;
+  z-index: 2;
+  will-change: transform;
+}
+
+.link-box::before,
+.link-box::after {
+  content: "";
+  position: absolute;
+  background-color: transparent;
+  box-shadow: 8px 5px #0e0e0e;
+}
+
+.link-box::before {
+  right: 0;
+  top: -40px;
+  width: 40px;
+  height: 40px;
+  border-bottom-right-radius: 20px;
+}
+
+.link-box::after {
+  bottom: 0;
+  left: -30px;
+  width: 30px;
+  height: 30px;
+  border-bottom-right-radius: 20px;
+}
+
+.project-box {
+  /* Removed transform and transition from CSS */
+  box-shadow: 0 0 0 rgba(148, 15, 242, 0.7);
+  will-change: transform;
+}
+
+.project-text-h1 {
+  transition: color 0.3s ease, filter 0.3s ease;
+}
+
+.project-box:hover .project-text-h1 {
+  color: #ffffff;
+  transform: scale(1.1);
+  font-weight: 800;
+  filter: drop-shadow(0 0 5px rgba(148, 15, 242, 0.7));
+}
+
+.clr {
+  color: white;
+  transform: rotate(-30deg);
+  transition: transform 0.3s ease;
+}
+
+.clr:hover {
+  transform: rotate(0deg);
+}
+
+/* Remove zoom scale here if you're using Framer Motion for it */
+.zoom:hover {
+  transform: scale(1.1);
+  will-change: transform;
+}
+i {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  border-radius: 50%;
+  background: #ff00d4; /* Pink color */
+  pointer-events: none;
+  z-index: 10000;
+  animation: drawEffect 0.5s linear forwards;
+}
+
+@keyframes drawEffect {
+  0% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(var(--x), var(--y)); /* Move along x and y */
+  }
+}
