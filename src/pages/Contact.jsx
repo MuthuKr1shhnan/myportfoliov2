@@ -5,7 +5,7 @@ import emailjs from "emailjs-com";
 import { AwesomeButton } from "react-awesome-button";
 import { motion as Motion } from "framer-motion";
 import { toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+import "react-toastify/dist/ReactToastify.css"; 
 import { FaLinkedin } from "react-icons/fa";
 import { FaGithubSquare } from "react-icons/fa";
 
@@ -87,8 +87,8 @@ const Contact = () => {
 
   return (
     <section
-      id='contact'
-      className='bg-cover bg-center bg-no-repeat'
+      id="contact"
+      className="bg-cover bg-center bg-no-repeat"
       style={{ backgroundImage: "url('/bg-contact.svg')" }}
     >
       <Motion.div
@@ -100,23 +100,23 @@ const Contact = () => {
           type: "spring",
           stiffness: 300,
         }}
-        viewport={{ once: true, amount: 0.8 }}
-        className='w-full h-[100vh] bg-cover bg-center bg-no-repeat flex-col flex items-center justify-center px-4'
+        viewport={{ once: true, amount: .8 }}
+        className="w-full h-[100vh] bg-cover bg-center bg-no-repeat flex items-center justify-center px-4"
       >
-        <form className='w-full max-w-xl mt-auto text-white' onSubmit={handleSubmit}>
-          <h2 className='text-4xl font-bold mb-6'>Mail Me 📨</h2>
+        <form className="w-full max-w-xl text-white" onSubmit={handleSubmit}>
+          <h2 className="text-4xl font-bold mb-6">Mail Me 📨</h2>
 
-          <div className='relative mb-12 w-full flex'>
+          <div className="relative mb-12 w-full flex">
             <Hlt3 />
           </div>
 
-          <label className='block text-gray-300 mb-2' htmlFor='email'>
+          <label className="block text-gray-300 mb-2" htmlFor="email">
             Your email
           </label>
           <input
-            type='email'
-            id='email'
-            name='email'
+            type="email"
+            id="email"
+            name="email"
             value={formData.email}
             onChange={handleChange}
             className={`w-full bg-transparent border-b ${
@@ -124,16 +124,16 @@ const Contact = () => {
             } py-2 px-1 text-white focus:outline-none`}
           />
           {errors.email && (
-            <p className='text-red-500 text-sm mt-1'>{errors.email}</p>
+            <p className="text-red-500 text-sm mt-1">{errors.email}</p>
           )}
 
-          <label className='block text-gray-300 mt-6 mb-2' htmlFor='message'>
+          <label className="block text-gray-300 mt-6 mb-2" htmlFor="message">
             Message
           </label>
           <textarea
-            id='message'
-            name='message'
-            rows='4'
+            id="message"
+            name="message"
+            rows="4"
             value={formData.message}
             onChange={handleChange}
             className={`w-full bg-transparent border-b ${
@@ -141,48 +141,21 @@ const Contact = () => {
             } py-2 px-1 text-white focus:outline-none resize-none`}
           />
           {errors.message && (
-            <p className='text-red-500 text-sm mt-1'>{errors.message}</p>
+            <p className="text-red-500 text-sm mt-1">{errors.message}</p>
           )}
-          <div className=' mt-6'>
+          <div className=" mt-6">
             <AwesomeButton
-              type='primary'
-              size='large'
+              type="primary"
+              size="large"
               onPress={(e) => handleSubmit(e)}
             >
-              Send Mail <IoIosSend style={{ marginLeft: "12px" }} size={22} />
+              Send Mail{" "}
+              <IoIosSend style={{ marginLeft: "12px" }} size={22} />
             </AwesomeButton>
           </div>
+         
         </form>
-        <Motion.div
-          initial={{ y: 60, opacity: 0 }}
-          whileInView={{ y: 0, opacity: 1 }}
-          transition={{
-            duration: 0.8,
-            ease: "easeOut",
-            type: "spring",
-            stiffness: 120,
-            delay: 0.3,
-          }}
-          viewport={{ once: true }}
-          className=' flex items-center h-24 justify-end mt-auto mr-36 w-full gap-8'
-        >
-          <a
-            href='www.linkedin.com/in/muthu-krishnan000'
-            target='_blank'
-            rel='noopener noreferrer'
-            className='text-blue-500 text-3xl hover:scale-110 transition-transform duration-300'
-          >
-            <FaLinkedin size={48} />
-          </a>
-          <a
-            href='https://github.com/MuthuKr1shhnan'
-            target='_blank'
-            rel='noopener noreferrer'
-            className='text-gray-300 text-3xl hover:scale-110 transition-transform duration-300'
-          >
-            <FaGithubSquare  size={48}  />
-          </a>
-        </Motion.div>
+        
       </Motion.div>
     </section>
   );

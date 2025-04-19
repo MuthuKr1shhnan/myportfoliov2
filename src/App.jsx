@@ -11,6 +11,7 @@ import MobileMenu from "./components/MobileMenu";
 import { ToastContainer } from "react-toastify"; // Import ToastContainer
 import "react-toastify/dist/ReactToastify.css";
 import SparkEffect from "./components/SparkEffect";
+import FloatingSocials from "./components/FloatingSocials";
 
 function App() {
   const [loader, upadateLoader] = useState(true);
@@ -41,7 +42,7 @@ function App() {
       <Loader loader={loader} />
       <Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
       <MobileMenu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
-
+    <FloatingSocials/>
       <Home />
       <SparkEffect />
       <About />
