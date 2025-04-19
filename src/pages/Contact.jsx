@@ -167,7 +167,7 @@ const Contact = () => {
           className=' flex items-center h-24 justify-end mt-auto mr-36 w-full gap-8'
         >
           <a
-            href='https://linkedin.com'
+            href='www.linkedin.com/in/muthu-krishnan000'
             target='_blank'
             rel='noopener noreferrer'
             className='text-blue-500 text-3xl hover:scale-110 transition-transform duration-300'
@@ -175,7 +175,7 @@ const Contact = () => {
             <FaLinkedin size={48} />
           </a>
           <a
-            href='https://github.com'
+            href='https://github.com/MuthuKr1shhnan'
             target='_blank'
             rel='noopener noreferrer'
             className='text-gray-300 text-3xl hover:scale-110 transition-transform duration-300'
