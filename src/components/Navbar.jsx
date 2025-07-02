@@ -238,8 +238,8 @@ const Navbar = ({ menuOpen, setMenuOpen }) => {
       whileInView={{ once: false, amount: 0.3 }}
       transition={{ duration: 0.3 }}
       className={`fixed z-100 backdrop-blur-[15px] left-1/2 transform -translate-x-1/2 ${
-        scrolled ? "top-0 left-0 w-full rounded-none" : "top-4 w-[85%] rounded-full"
-      } px-6 py-3 bg-[rgba(10,10,10,0.43)] border border-white/10 shadow-lg transition-all duration-300`}
+        scrolled ? "top-0 left-0 w-full rounded-none" : "top-4 mt-5 w-[85%] rounded-full"
+      } px-6  bg-[rgba(10,10,10,0.43)] border border-white/10 shadow-lg transition-all duration-300`}
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         <div className="p-2 rounded-full">
