@@ -13,7 +13,7 @@ const FloatingSocials = () => {
         stiffness: 120,
         delay: 0.3,
       }}
-      className="fixed bottom-8 right-6 z-50 flex flex-col items-center gap-4  p-3 "
+      className="fixed bottom-54 right-6 z-50 flex flex-col items-center gap-4  p-3 "
     >
       <a
         href="https://www.linkedin.com/in/muthu-krishnan000"
