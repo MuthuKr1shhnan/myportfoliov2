@@ -54,7 +54,7 @@ const Project = () => {
     <section id='projects'>
       <div
         style={{ backgroundImage: "url('/bg-pattern2.svg')" }}
-        className='w-full h-[100vh] bg-[#0e0e0e] overflow-auto overflow-x-hidden md:overflow-hidden bg-cover bg-center bg-no-repeat text-white p-8 flex flex-col items-center'
+        className='w-full h-[100vh] bg-transparent overflow-auto overflow-x-hidden md:overflow-hidden bg-cover bg-center bg-no-repeat text-white p-8 flex flex-col items-center'
       >
         <Motion.div
           className='w-[95%] grid grid-cols-1 mx-auto z-10 pb-[72px]'

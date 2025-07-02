@@ -22,7 +22,7 @@ const About = () => {
     return direction === "left" ? -value : value;
   };
   return (
-    <section id='about' className='bg-[#0e0e0e] text-white'>
+    <section id='about' className='bg-transparent text-white'>
       <div
         className='w-full bg-cover overflow-x-hidden h-[100vh] bg-center overflow-auto bg-no-repeat px-6 py-12 md:py-20'
         style={{ backgroundImage: "url('/bg-pattern1.svg')" }}

@@ -45,7 +45,7 @@ const Home = () => {
       <div>
         <Motion.div className='flex flex-col h-[100vh ]min-h-[100vh] top-0 left-0 relative min-w-[320px] '>
           <NeuroBackground />
-          <div className='bg-[#111010] w-full h-full min-h-[100svh] flex flex-col lg:flex-row justify-center gap-8 items-center'>
+          <div className='bg-transparent w-full h-full min-h-[100svh] flex flex-col lg:flex-row justify-center gap-8 items-center'>
             <div className='w-full h-full flex flex-col justify-center items-center  lg:pl-24 xl:pl-0 absolute z-20'>
               <h1 className='text-center text-7xl md:text-8xl lg:text-8xl   text-[#fdfdfd] cursor-pointer m-10 mb-4 '>
                 {"Hi! I'm Muthu Krishnan.S".split("").map((letter, index) => (
